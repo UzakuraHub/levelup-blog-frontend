@@ -40,6 +40,7 @@ body {
   border: none !important;
   padding: 0.5rem 2rem;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .theme-switcher {
@@ -202,6 +203,10 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
+.blog-title {
+  display: flex;
+  justify-content: center;
+}
 
 .blog-footer {
   margin-top: 2rem;
@@ -234,6 +239,11 @@ main {
 .login-image img {
   width: 100%;
   margin: 4rem auto;
+}
+
+.register-image img {
+  width: 100%;
+  margin: 9rem auto;
 }
 
 .login-body {
@@ -276,4 +286,20 @@ main {
 
 .image-preview img {
   height: 100%;
+}
+#email-valid,
+#password-valid {
+  background: rgba(153, 141, 141, 0.842);
+  border: none;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.email-validation {
+  margin: auto;
+  font-size: 17px;
+  padding: 10px;
+}
+.hide-valid {
+  display: none;
 }

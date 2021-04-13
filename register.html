@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>SignUp</title>
     <link
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
@@ -15,20 +15,29 @@
     <button class="theme-switcher">
       <span class="dark">☀️</span><span class="light">🌙</span>
     </button>
-    <main class="login-page">
+    <main class="signUp-page">
       <section class="login">
-        <div class="login-image">
+        <div class="register-image">
           <img src="./assets/img/login-illustration.svg" />
         </div>
         <div class="login-body">
-          <h2>Login</h2>
-          <form action="" data-login-form>
-            <div id="email-valid"></div>
+          <h2>Register</h2>
+          <form action="" register-form>
             <div class="input-field">
+              <label for="username">username</label>
+              <input type="text" name="username" id="username" />
+            </div>
+            <div class="input-field">
+              <div class="modal active" email-modal>
+                <div class="email-modal" id="email-modal">
+                  email already exists
+                  <button class="close-button">&times;</button>
+                </div>
+              </div>
+              <div id="overlay"></div>
               <label for="email">Email</label>
               <input type="email" name="email" id="email" />
             </div>
-            <div id="password-valid"></div>
             <div class="input-field">
               <label for="password">Password</label>
               <input type="password" name="password" id="password" />
@@ -37,16 +46,17 @@
               <input
                 class="btn"
                 type="submit"
-                value="Login"
-                name="login"
-                id="login"
+                value="Register"
+                name="register"
+                id="register"
               />
             </div>
           </form>
         </div>
       </section>
     </main>
+
     <script src="./js/theme.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/register.js"></script>
   </body>
 </html>
