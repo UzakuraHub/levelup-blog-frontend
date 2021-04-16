@@ -197,9 +197,9 @@ main {
 }
 
 .blog-body {
-  padding: 1rem;
+  padding: 10px;
   display: flex;
-  height: calc(100% - 200px);
+  height: calc(100% - 400px);
   flex-direction: column;
   justify-content: space-between;
 }
@@ -209,9 +209,15 @@ main {
 }
 
 .blog-footer {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
-
+.submit {
+  display: flex;
+}
+.button {
+  margin: 20px;
+  padding: 20px;
+}
 .blog-footer ul {
   display: flex;
   justify-content: space-around;

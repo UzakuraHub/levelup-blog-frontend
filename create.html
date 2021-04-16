@@ -40,6 +40,7 @@
         <div class="login-body">
           <h2>Create a blog</h2>
           <form action="" new-post-form>
+            <div class="input-field popupCreate"></div>
             <div class="input-field">
               <label for="title">Title</label>
               <input type="text" data-new-post-title name="title" id="title" />
@@ -61,13 +62,26 @@
             <div class="input-field">
               <div class="image-preview">
                 <img
-                  src="https://via.placeholder.com/728x500.png?text=Made+by+RedJanvier"
+                  src="https://via.placeholder.com/728x500.png?text=Made+by+Richard"
                   alt="preview"
                 />
               </div>
             </div>
-            <div class="input-field">
-              <input type="submit" value="Create" name="create" id="create" />
+            <div class="input-field submit">
+              <input
+                type="submit"
+                value="Create"
+                name="create"
+                id="create"
+                class="button btn"
+              />
+              <input
+                type="submit"
+                value="update"
+                name="update"
+                id="update"
+                class="button btn"
+              />
             </div>
           </form>
         </div>

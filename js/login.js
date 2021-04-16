@@ -44,7 +44,7 @@ LoginButton.addEventListener("click", (e) => {
         console.log("successfully authenticated", data.message);
         const token = JSON.stringify(data.data.token);
         localStorage.setItem("token", token);
-        redirectTo("http://127.0.0.1:5501/levelup-blog-frontend/create.html");
+        window.location.href = "http://127.0.0.1:5500/blogs.html";
       }
     })
     .catch((err) => {
