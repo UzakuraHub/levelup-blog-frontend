@@ -29,7 +29,7 @@ SignUp.addEventListener("click", (e) => {
         openModal(modal);
       } else {
         if (data.status === 201) {
-          return redirectTo("../create,html");
+          location.href = "http://127.0.0.1:5500/blogs.html";
         }
         console.log("successfully created user", data);
       }

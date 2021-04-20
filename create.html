@@ -26,7 +26,7 @@
           <li class="link active">
             <a href="#">Create</a>
           </li>
-          <li class="link">
+          <li class="link log-options" id="logout login">
             <a href="#">Logout</a>
           </li>
         </ul>
@@ -41,10 +41,12 @@
           <h2>Create a blog</h2>
           <form action="" new-post-form>
             <div class="input-field popupCreate"></div>
+            <div class="title-error"></div>
             <div class="input-field">
               <label for="title">Title</label>
               <input type="text" data-new-post-title name="title" id="title" />
             </div>
+            <div class="body-error"></div>
             <div class="input-field">
               <label for="body">Body</label>
               <input type="text" data-new-post-body name="body" id="body" />
