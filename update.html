@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create blog</title>
+    <title>Update your blog</title>
     <link
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
@@ -17,7 +17,7 @@
     </button>
     <nav class="navbar-wrapper">
       <div class="navbar">
-        <a href="blogs.html" class="logo">TechBlog-Pro</a>
+        <a href="./blogs.html" class="logo">TechBlog-Pro</a>
         <span class="separator"></span>
         <ul class="links hide">
           <li class="link">
@@ -38,8 +38,10 @@
     <main class="login-page">
       <div class="login">
         <div class="login-body">
-          <h2>Create a blog</h2>
+          <h2>Update your blog</h2>
           <form create-form>
+            <div class="input-field popupCreate"></div>
+            <div class="title-error"></div>
             <div class="input-field">
               <label for="title">Title</label>
               <input type="text" name="title" id="title" />
@@ -61,7 +63,7 @@
               </div>
             </div>
             <div class="input-field" style="display: flex; justify-content: space-between;">
-              <input type="submit" value="Create" name="create" id="Create" class="button btn" />
+               <input type="submit" value="Update" name="update" id="update" class="button btn" />
             </div>
           </form>
         </div>
@@ -70,6 +72,6 @@
 
     <script src="./js/theme.js"></script>
     <script src="./js/navbar.js"></script>
-    <script src="./js/createBlog.js"></script>
-   </body>
+    <script src="./js/updateBlog.js"></script>
+  </body>
 </html>
