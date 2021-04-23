@@ -1,6 +1,6 @@
 const singlePost = document.querySelector(".single-blog");
 const postId = location.href.split(`?id=`)[1];
-fetch(`http://localhost:8080/api/posts/${postId}`, {
+fetch(`https://blog-plaza.herokuapp.com/api/posts/${postId}`, {
   method: "GET",
   headers: {
     "content-Type": "application/json",

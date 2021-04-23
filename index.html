@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>My Blog</title>
     <link
       href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
@@ -15,33 +15,32 @@
     <button class="theme-switcher">
       <span class="dark">☀️</span><span class="light">🌙</span>
     </button>
-    <main class="login-page">
-      <section class="login">
-        <div class="login-image">
-          <img src="./assets/img/login-illustration.svg" />
-        </div>
-        <div class="login-body">
-          <h2>Login</h2>
-          <form action="" class="login-form">
-            <div class="fadeIn-fadeOut-email"></div>
-            <div class="input-field">
-              <label for="email" id="email">Email</label>
-              <input type="email" name="email" id="email" />
-            </div>
-            <div class="fadeIn-fadeOut-password"></div>
-            <div class="input-field">
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password" />
-            </div>
-            <div id="loginButton">
-              <a href="" class="btn" type="submit" id="login">login</a
-              ><a href="./register.html" id="register">Register Now</a>
-            </div>
-          </form>
-        </div>
-      </section>
+    <nav class="navbar-wrapper">
+      <div class="navbar">
+        <a href="./index.html" class="logo">Blog-Plaza</a>
+        <span class="separator"></span>
+        <ul class="links hide">
+          <li class="link active">
+            <a href="#">Blogs</a>
+          </li>
+          <li class="link">
+            <a href="./create.html" id="create">Create</a>
+          </li>
+          <li class="link log-options" id="logout">
+            <a href="#">Logout</a>
+          </li>
+        </ul>
+        <button class="toggle">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <div class="blogs-list"></div>
     </main>
+    <footer></footer>
+    <script src="./js/navbar.js"></script>
     <script src="./js/theme.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

@@ -11,7 +11,7 @@ SignUp.addEventListener("click", (e) => {
   const email = registerForm.email.value.trim();
   const password = registerForm.password.value.trim();
 
-  fetch("http://localhost:8080/api/users", {
+  fetch("https://blog-plaza.herokuapp.com/api/users", {
     method: "POST",
     headers: {
       "content-Type": "application/json",
@@ -25,20 +25,15 @@ SignUp.addEventListener("click", (e) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      if (data.status === 208) {
-        openModal(modal);
+      if (data.status === 400) {
+        console.log("please fill all required fields");
       } else {
         if (data.status === 201) {
           location.href = "http://127.0.0.1:5500/blogs.html";
         }
-        console.log("successfully created user", data);
       }
     })
     .catch((err) => {
       console.log("some error  occured", err.message);
     });
 });
-
-const openModal = (modal) => {
-  modal.classList.add("active");
-};

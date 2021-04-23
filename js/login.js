@@ -10,7 +10,7 @@ LoginButton.addEventListener("click", (e) => {
   if (Login.email === null || Login.password === null)
     return console.log("please fill all fields!");
 
-  fetch("http://localhost:8080/api/users/login", {
+  fetch("https://blog-plaza.herokuapp.com/api/users/login", {
     method: "POST",
     headers: {
       "content-Type": "application/json",
@@ -29,7 +29,6 @@ LoginButton.addEventListener("click", (e) => {
     .then((data) => {
       if (data.status === 409) {
         if (email === null) {
-          // emailValidate.innerHTML += `<p class="email-validation">please fill all required fields ${data.message}</p>`;
           let valid = "";
           console.log("please fill all required fields");
           valid = `<div class="fadeIn"><p id="fade-out">provide email address</p></div>`;
@@ -38,8 +37,6 @@ LoginButton.addEventListener("click", (e) => {
             emailErrorHandler.classList.add("fadeout");
             passwordErrorHandler.classList.add("fadeout");
           }, 3000);
-          // emailErrorHandler.classList.toggle("fadeout");
-          // passwordErrorHandler.classList.replace("fadeout", "fade");
         } else if (password === null) {
           let valid = "";
           console.log("please fill all required fields");
@@ -49,7 +46,7 @@ LoginButton.addEventListener("click", (e) => {
             passwordErrorHandler.classList.add("fadeout");
           }, 3000);
         }
-      } else if (data.status === 401) {
+      } else if (data.status === 400) {
         let valid = "";
         console.log("please fill all required fields");
         valid = `<div class="fadeIn"><p id="fade-out">${data.message}</p></div>`;
@@ -64,8 +61,7 @@ LoginButton.addEventListener("click", (e) => {
         const token = data.data.token;
         console.log(token);
         localStorage.setItem("token", token);
-        // console.log(localStorage);
-        window.location.href = "http://127.0.0.1:5500/blogs.html";
+        window.location.href = "./index.html";
       }
     })
     .catch((err) => {
